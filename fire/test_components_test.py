@@ -28,6 +28,7 @@ class TestComponentsTest(testutils.BaseTestCase):
   def testTestComponents(self):
     self.assertIsNotNone(tc.Empty)
     self.assertIsNotNone(tc.OldStyleEmpty)
+    self.assertIsNotNone(tc.MultipleMethodsSameParamName)
 
   def testNonComparable(self):
     with self.assertRaises(ValueError):

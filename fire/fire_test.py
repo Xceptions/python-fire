@@ -726,6 +726,11 @@ class FireTest(testutils.BaseTestCase):
     self.assertEqual(fire.Fire(tc.py3.WithAsyncio,
                                command=['double', '--count', '10']), 20)
 
+  def testMultipleMethodsSameParamName(self):
+    self.assertEqual(fire.Fire(tc.MultipleMethodsSameParamName,
+                               command=['bar', '--param=3', '-', 'baz', '--param=5', 'end']), 'end')
+
 
 if __name__ == '__main__':
   testutils.main()
+  

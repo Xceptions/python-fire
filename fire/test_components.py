@@ -573,3 +573,16 @@ def fn_with_multiple_defaults(first='first', last='last', late='late'):
   """
   del last, late
   return first
+
+class MultipleMethodsSameParamName(object):
+
+    def bar(self, param=0):
+        print(f"bar (param={param})")
+        return self
+
+    def baz(self, param=0):
+        print(f"baz (param={param})")
+        return self
+
+    def end(self):
+        return "end"
